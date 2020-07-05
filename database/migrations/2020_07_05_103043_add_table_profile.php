@@ -18,8 +18,6 @@ class AddTableProfile extends Migration
             $table->string('nama_lengkap', 255);
             $table->string('img_profile', 255);
             $table->integer('have_article')->default(0);
-            $table->integer('have_follower')->default(0);
-            $table->timestamps();
         });
     }
 

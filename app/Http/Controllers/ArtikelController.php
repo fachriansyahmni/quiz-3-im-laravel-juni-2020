@@ -46,7 +46,6 @@ class ArtikelController extends Controller
             'slug' => Str::slug($request->judul),
             'tag' => implode(",", $tags)
         ]);
-        // dd($data);
         $data->save();
         return redirect('/artikel')->with('success', 'Artikel behasil dibuat');
     }
@@ -95,7 +94,6 @@ class ArtikelController extends Controller
                 'tag' => implode(",", $tags)
             ];
         }
-        // dd($data_edited);
         $data->update($data_edited);
 
         return redirect('/artikel')->with('success', 'Artikel berhasil diupdate');
